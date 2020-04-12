@@ -4,7 +4,7 @@
 
 1. Fork this repository
 2. Clone the forked repository to your local computer.
-2. Setup your application
+3. Setup your application
    ```bash
    # Make sure you run this command inside the week2 folder. Check via `pwd`
    # Not doing so may cause the create-react-app command to fail
@@ -12,7 +12,7 @@
    # /path/to/week2-assignment
    create-react-app blog-homepage
    ```
-3. Ensure you can run your dev server
+4. Ensure you can run your dev server
    ```bash
    cd blog-homepage
    npm start
