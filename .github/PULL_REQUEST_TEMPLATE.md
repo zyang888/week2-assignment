@@ -1,4 +1,4 @@
-# Week 1 HW Submission
+# Week 2 HW Submission
 
 Please fill out the information below in order to complete your assignment. Feel free to update this comment later if necessary.
 
