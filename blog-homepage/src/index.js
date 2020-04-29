@@ -10,7 +10,7 @@ class Square extends React.Component {
     const temp = new Date(this.props.value.postedDate);
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     return (
-      <div className="square">
+      <div className={"square "+this.props.section}>
         <img src={this.props.value.image} alt={this.props.value.title}/>
         <article>
           <div className="article">
@@ -33,7 +33,7 @@ class ForYou extends React.Component {
     return (
       <section>
       <div className="title"><h1>For you</h1></div>
-        {renderSquare(yourdata)}
+        {renderSquare(yourdata,"foryou")}
       </section>
     );
   }
@@ -45,7 +45,7 @@ class InCase extends React.Component {
     return (
       <section>
       <div className="title"><h1>In case you missed it</h1></div>
-        {renderSquare(misseddata)}
+        {renderSquare(misseddata,"incase")}
       </section>
     );
   }
@@ -67,11 +67,11 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function renderSquare(data) {
+function renderSquare(data, section) {
   return (data.map((data) => {
     return (
       <Square key={data.title}
-        value={data}
+        value={data} section={section}
       />
     )
   })
