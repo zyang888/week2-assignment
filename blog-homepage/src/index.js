@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import yourdata from './data/your-articles.json'
-import misseddata from './data/missed-articles.json'
-import Container from 'react-bootstrap/Container'
+import yourdata from './data/your-articles.json';
+import misseddata from './data/missed-articles.json';
+import Container from 'react-bootstrap/Container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 
 class Square extends React.Component {
   render() {
@@ -21,6 +23,7 @@ class Square extends React.Component {
             <img className={(this.props.value.author.isMediumMember)? "green" : ""} src={this.props.value.author.image} alt={this.props.value.author.name}/>
             <p><strong>{this.props.value.author.name}</strong><br/>
             {monthNames[temp.getMonth()]} {temp.getDate()} &bull; {this.props.value.minutesToRead} min read</p>
+            <FontAwesomeIcon icon={faBookmark} />
           </div>
         </article>
       </div>
@@ -38,7 +41,6 @@ class ForYou extends React.Component {
     );
   }
 }
-
 
 class InCase extends React.Component {
   render() {
